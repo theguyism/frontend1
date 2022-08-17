@@ -12,7 +12,7 @@ const HomeScreen = ({ navigation }) => {
     <View style={styles.container}>
       <Text style={styles.header}>Sainsbury's</Text>
       <Text style={styles.sub_header}>Reserve & Delivery</Text>
-      <Image style={styles.main_img} source={require("./pic1.png")} />
+      <Image style={styles.main_img} source={require("../pic1.png")} />
       <TouchableOpacity
         style={styles.loginScreenButton}
         //onPress={() => navigate('HomeScreen')}
@@ -20,7 +20,6 @@ const HomeScreen = ({ navigation }) => {
       >
         <Text style={styles.loginText}>Get Started</Text>
       </TouchableOpacity>
-      <StatusBar style="auto" />
     </View>
   );
 };
