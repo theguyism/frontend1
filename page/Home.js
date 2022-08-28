@@ -5,7 +5,14 @@ import {
   View,
   Image,
   Button,
+  Keyboard,
+  TextInput
 } from "react-native";
+
+import React, { Component } from 'react';
+
+
+
 
 const HomeScreen = ({ navigation }) => {
   return (
@@ -15,7 +22,9 @@ const HomeScreen = ({ navigation }) => {
       <Image style={styles.main_img} source={require("../pic1.png")} />
       <TouchableOpacity
         style={styles.loginScreenButton}
-        //onPress={() => navigate('HomeScreen')}
+
+        onPress={() => navigation.navigate('Register')}
+
         underlayColor="#C8263A"
       >
         <Text style={styles.loginText}>Get Started</Text>
@@ -36,18 +45,22 @@ const styles = StyleSheet.create({
   header: {
     fontSize: 36,
     color: "white",
+    marginTop:5,
+   
   },
   sub_header: {
     fontSize: 16,
     color: "#E3AEAE",
     marginTop: 10,
+    fontWeight:"bold",
+    marginBottom:30,
   },
   main_img: {
     width: 153,
     height: 138,
     borderRadius: 57,
     marginTop: 30,
-    marginBottom: 45,
+    marginBottom: 55,
   },
 
   loginScreenButton: {
@@ -57,10 +70,11 @@ const styles = StyleSheet.create({
     paddingTop: 10,
     paddingBottom: 10,
     backgroundColor: "#C8263A",
-    borderWidth: 1,
+    width:"65%"
   },
 
   loginText: {
     color: "white",
+    textAlign:"center",
   },
 });
